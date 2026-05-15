@@ -44,7 +44,12 @@
           ],
           "field": "_decision"
         }
-      ]
+      ],
+      "last_edit": {
+        "by": "athena",
+        "at": "2026-05-15T16:07:00.436088+00:00",
+        "source": "discovery.extract_features.mvp"
+      }
     },
     {
       "id": "feat_pairing_engine_d4e5f6",
@@ -75,7 +80,22 @@
         "inception.json:product_vision",
         "PRD.md"
       ],
-      "open_questions": []
+      "open_questions": [],
+      "last_edit": {
+        "by": "athena",
+        "at": "2026-05-15T16:07:00.436088+00:00",
+        "source": "discovery.extract_features.mvp"
+      }
     }
-  ]
+  ],
+  "_provenance": {
+    "source_inception_sha": "afec8d3cb57fa9cb34e73537dba3db05123bd855",
+    "source_inception_updated_at": null,
+    "skill_slug": "discovery-features",
+    "use_case_slug": "discovery.extract_features.mvp",
+    "worker": "apps.athena.manufacture.discovery_extractor:run_extraction",
+    "generated_at": "2026-05-15T16:07:00.442964+00:00",
+    "run_id": "370889e6f57f4a3b919b5065942339a1",
+    "artifact_schema": "features_v1"
+  }
 }

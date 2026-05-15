@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "horizon": "mvp",
+  "generated_at": "2026-05-15T16:20:00Z",
+  "generated_by": "claude-code",
+  "components": [
+    {
+      "id": "feat_intake_questionnaire_a1b2c3",
+      "name": "Intake questionnaire",
+      "feature_id": "feat_intake_questionnaire_a1b2c3",
+      "epic_id": "epic_matching-layer_a1b2c3",
+      "layer": "",
+      "technology": "",
+      "depends_on": []
+    },
+    {
+      "id": "feat_pairing_engine_d4e5f6",
+      "name": "Pairing engine",
+      "feature_id": "feat_pairing_engine_d4e5f6",
+      "epic_id": "epic_matching-layer_a1b2c3",
+      "layer": "",
+      "technology": "",
+      "depends_on": []
+    },
+    {
+      "id": "feat_slack_community_1a2b3c",
+      "name": "Slack community",
+      "feature_id": "feat_slack_community_1a2b3c",
+      "epic_id": "epic_community-layer_def456",
+      "layer": "",
+      "technology": "",
+      "depends_on": []
+    },
+    {
+      "id": "feat_community_spaces_4d5e6f",
+      "name": "Community spaces",
+      "feature_id": "feat_community_spaces_4d5e6f",
+      "epic_id": "epic_community-layer_def456",
+      "layer": "",
+      "technology": "",
+      "depends_on": []
+    },
+    {
+      "id": "feat_referral_guide_7a8b9c",
+      "name": "Referral guide",
+      "feature_id": "feat_referral_guide_7a8b9c",
+      "epic_id": "epic_referral-education-layer_789abc",
+      "layer": "",
+      "technology": "",
+      "depends_on": []
+    },
+    {
+      "id": "feat_referral_templates_0d1e2f",
+      "name": "Referral templates",
+      "feature_id": "feat_referral_templates_0d1e2f",
+      "epic_id": "epic_referral-education-layer_789abc",
+      "layer": "",
+      "technology": "",
+      "depends_on": []
+    }
+  ],
+  "source": "features_oneshot_stub",
+  "_provenance": {
+    "source_inception_sha": "afec8d3cb57fa9cb34e73537dba3db05123bd855",
+    "source_inception_updated_at": null,
+    "skill_slug": "discovery-features",
+    "use_case_slug": "discovery.extract_features.mvp",
+    "worker": "apps.athena.manufacture.discovery_extractor:run_extraction",
+    "generated_at": "2026-05-15T16:07:00.438520+00:00",
+    "run_id": "370889e6f57f4a3b919b5065942339a1",
+    "artifact_schema": "architecture_v1"
+  }
+}
