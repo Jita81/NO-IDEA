@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "status": "in_progress",
   "updated_by": "user",
-  "last_updated": "2026-05-15T16:04:01.206870+00:00",
+  "last_updated": "2026-05-15T16:04:15.881269+00:00",
   "sections": {
     "product_vision": {
       "name": "Product Vision",
@@ -199,7 +199,7 @@
     "phases_and_sizing": {
       "name": "Phases and Sizing",
       "description": "How is the work broken down and sequenced?",
-      "completion_pct": 75.0,
+      "completion_pct": 87.5,
       "fields": {
         "phase_breakdown": {
           "status": "complete",
@@ -260,10 +260,10 @@
           "completeness_issue": "Exact effort sizing (person\u2011weeks) not specified in source."
         },
         "dependency_order": {
-          "status": "partial",
-          "value_short": "MVP must be delivered before MMP; Stripe integration depends on Supabase user data.",
-          "value_long": "The PRD lists dependencies but does not define a precise order. Implicitly, the MVP (manual matching, Slack community) precedes the MMP (custom app). Additionally, Stripe billing requires user accounts stored in Supabase, suggesting Supabase must be configured before Stripe integration. The lack of an explicit chain makes this field partial.",
-          "confidence": 0.4,
+          "status": "complete",
+          "value_short": "The required integration order is Supabase \u2192 Stripe \u2192 Resend before MMP can go live.",
+          "value_long": "The PRD lists dependencies but does not define a precise order. Implicitly, the MVP (manual matching, Slack community) precedes the MMP (custom app). Additionally, Stripe billing requires user accounts stored in Supabase, suggesting Supabase must be configured before Stripe integration. The stakeholder clarifies the exact sequence of external integrations that must be completed before MMP can go live: Supabase \u2192 Stripe \u2192 Resend. This explicit chain confirms the implied ordering and completes the previously partial dependency description.",
+          "confidence": 0.7,
           "source_refs": [
             "PRD.md"
           ],
@@ -271,33 +271,18 @@
             "quotes": [],
             "reasoning": "No explicit ordering is quoted; inference is weak."
           },
-          "open_questions": [
-            {
-              "question": "What exact sequence of external integrations (Supabase, Stripe, Resend) must be completed before MMP can go live?",
-              "severity": "important",
-              "reason": "Dependency order impacts rollout schedule.",
-              "what_we_know": "Document lists dependencies but not their order.",
-              "what_good_looks_like": "Supabase set up first, then Stripe integration, then Resend email service.",
-              "sources_checked": [
-                "PRD.md"
-              ],
-              "suggested_answers": [
-                {
-                  "text": "Supabase \u2192 Stripe \u2192 Resend",
-                  "recommended": true
-                },
-                {
-                  "text": "Stripe \u2192 Supabase \u2192 Resend",
-                  "recommended": false
-                },
-                {
-                  "text": "All three can be configured in parallel.",
-                  "recommended": false
-                }
-              ]
-            }
-          ],
-          "completeness_issue": "Specific dependency chain details are missing."
+          "open_questions": [],
+          "completeness_issue": "Specific dependency chain details are missing.",
+          "last_edit": {
+            "by": "athena",
+            "at": "2026-05-15T16:04:15.881227+00:00",
+            "source": "inception_edit.answer_merge",
+            "diff_span": {
+              "start": 0,
+              "end": 543
+            },
+            "diff_kind": "merge"
+          }
         },
         "timeline": {
           "status": "complete",
@@ -353,9 +338,9 @@
   },
   "overall": {
     "complete": false,
-    "completion_pct": 91.7,
-    "fields_complete": 10,
+    "completion_pct": 95.8,
+    "fields_complete": 11,
     "fields_total": 12,
-    "open_questions_count": 2
+    "open_questions_count": 1
   }
 }
