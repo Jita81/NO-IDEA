@@ -1,0 +1,531 @@
+{
+  "version": 1,
+  "generated_at": "2026-05-15T16:30:00Z",
+  "generated_by": "deepseek-oneshot",
+  "stories": [
+    {
+      "id": "story_slack_invite_001_a1b2",
+      "name": "Slack invitation link",
+      "feature_id": "feat_slack_community_1a2b3c",
+      "sprint_number": 2,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a founder completes intake",
+          "when": "they are added to the Slack workspace",
+          "then": "they receive an invitation link"
+        }
+      ],
+      "dependencies": [],
+      "blockers": [],
+      "source_refs": [
+        "feat_slack_community_1a2b3c",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "When a founder finishes the intake questionnaire the platform must automatically provision a Slack workspace invitation and send it via email. This story implements the backend service that creates the invite and stores the link for later retrieval.",
+      "user_story": "As a founder, I want a Slack community so that I can engage with peers and share referrals.",
+      "story_points": 2,
+      "priority": "high",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "community",
+        "slack"
+      ],
+      "risks": [
+        "Slack API rate limits may delay invitation delivery"
+      ],
+      "testing_notes": "Run integration test against a test Slack workspace; verify email contains a valid invite URL.",
+      "status": "planned"
+    },
+    {
+      "id": "story_slack_post_002_b3c4",
+      "name": "Slack introductions posting",
+      "feature_id": "feat_slack_community_1a2b3c",
+      "sprint_number": 2,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a founder joins Slack",
+          "when": "they post a message in the #introductions channel",
+          "then": "other members can view and respond"
+        }
+      ],
+      "dependencies": [
+        "story_slack_invite_001_a1b2"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_slack_community_1a2b3c",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Implement the UI component that allows a founder to post an introduction message in the designated Slack channel and ensure the message is broadcast to all channel members.",
+      "user_story": "As a founder, I want a Slack community so that I can engage with peers and share referrals.",
+      "story_points": 2,
+      "priority": "high",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "frontend-team",
+      "labels": [
+        "community",
+        "slack"
+      ],
+      "risks": [
+        "Message formatting may break on mobile clients"
+      ],
+      "testing_notes": "Verify that a posted message appears in the channel and that other users can react.",
+      "status": "planned"
+    },
+    {
+      "id": "story_community_space_003_c5d6",
+      "name": "Create discussion thread",
+      "feature_id": "feat_community_spaces_4d5e6f",
+      "sprint_number": 3,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "the Slack workspace is active",
+          "when": "a community forum page is created",
+          "then": "founders can start discussion threads"
+        }
+      ],
+      "dependencies": [
+        "story_slack_post_002_b3c4"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_community_spaces_4d5e6f",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Add a UI page within the Slack integration that lists available community forums and enables a founder to create a new discussion thread for a specific industry or referral interest.",
+      "user_story": "As a founder, I want structured community spaces so that I can discuss partnership opportunities.",
+      "story_points": 3,
+      "priority": "medium",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "frontend-team",
+      "labels": [
+        "community",
+        "forums"
+      ],
+      "risks": [
+        "Thread indexing may become inconsistent"
+      ],
+      "testing_notes": "Create a thread via API and verify it appears in the forum list.",
+      "status": "planned"
+    },
+    {
+      "id": "story_community_notify_004_d7e8",
+      "name": "Thread comment notifications",
+      "feature_id": "feat_community_spaces_4d5e6f",
+      "sprint_number": 3,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a discussion thread exists",
+          "when": "a founder comments",
+          "then": "notifications are sent to participants"
+        }
+      ],
+      "dependencies": [
+        "story_community_space_003_c5d6"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_community_spaces_4d5e6f",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Implement notification logic that triggers a Slack direct message to all participants of a thread whenever a new comment is posted.",
+      "user_story": "As a founder, I want structured community spaces so that I can discuss partnership opportunities.",
+      "story_points": 3,
+      "priority": "medium",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "community",
+        "forums"
+      ],
+      "risks": [
+        "Notification spam may annoy users"
+      ],
+      "testing_notes": "Post a comment via API and assert that a notification message is delivered to each participant.",
+      "status": "planned"
+    },
+    {
+      "id": "story_intake_store_005_e9f0",
+      "name": "Store questionnaire data",
+      "feature_id": "feat_intake_questionnaire_a1b2c3",
+      "sprint_number": 1,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a founder accesses the intake page",
+          "when": "they complete the questionnaire",
+          "then": "the system stores their profile data"
+        }
+      ],
+      "dependencies": [],
+      "blockers": [],
+      "source_refs": [
+        "feat_intake_questionnaire_a1b2c3",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Create the backend endpoint that receives the questionnaire payload, validates it, and persists the founder's profile in the Supabase database.",
+      "user_story": "As a founder, I want an intake questionnaire so that I can provide the information needed to find complementary partners.",
+      "story_points": 2,
+      "priority": "critical",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "intake",
+        "matching"
+      ],
+      "risks": [
+        "Data validation errors could block onboarding"
+      ],
+      "testing_notes": "Submit a valid questionnaire payload and verify a row appears in the profiles table.",
+      "status": "planned"
+    },
+    {
+      "id": "story_intake_email_006_f1a2",
+      "name": "Intake confirmation email",
+      "feature_id": "feat_intake_questionnaire_a1b2c3",
+      "sprint_number": 1,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "the questionnaire is submitted",
+          "when": "the data is validated",
+          "then": "the founder receives a confirmation email"
+        }
+      ],
+      "dependencies": [
+        "story_intake_store_005_e9f0"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_intake_questionnaire_a1b2c3",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Add email sending logic using Resend (or similar) to notify the founder that their intake has been successfully recorded.",
+      "user_story": "As a founder, I want an intake questionnaire so that I can provide the information needed to find complementary partners.",
+      "story_points": 2,
+      "priority": "critical",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "intake",
+        "matching"
+      ],
+      "risks": [
+        "Email delivery failures may reduce user confidence"
+      ],
+      "testing_notes": "Mock email service and assert that an email payload is generated upon successful questionnaire submission.",
+      "status": "planned"
+    },
+    {
+      "id": "story_pairing_algorithm_007_g3h4",
+      "name": "Generate partner shortlist",
+      "feature_id": "feat_pairing_engine_d4e5f6",
+      "sprint_number": 2,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "stored profile data exists",
+          "when": "the pairing algorithm runs",
+          "then": "a list of up to three complementary partners is presented"
+        }
+      ],
+      "dependencies": [
+        "story_intake_store_005_e9f0"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_pairing_engine_d4e5f6",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Implement the matching algorithm that analyses intake profiles and returns up to three partner suggestions based on shared customer segments.",
+      "user_story": "As a founder, I want algorithmic pairing so that I receive relevant partner suggestions.",
+      "story_points": 3,
+      "priority": "high",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "matching",
+        "algorithm"
+      ],
+      "risks": [
+        "Algorithm performance may exceed time budget"
+      ],
+      "testing_notes": "Feed synthetic profiles into the engine and verify that the returned partners share at least one target customer segment.",
+      "status": "planned"
+    },
+    {
+      "id": "story_pairing_introduction_008_h5i6",
+      "name": "Send introduction request",
+      "feature_id": "feat_pairing_engine_d4e5f6",
+      "sprint_number": 2,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a list of matches is shown",
+          "when": "the founder selects a partner",
+          "then": "an introduction request is sent to the partner"
+        }
+      ],
+      "dependencies": [
+        "story_pairing_algorithm_007_g3h4"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_pairing_engine_d4e5f6",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Create the service that, upon founder selection, sends an email (or Slack message) to the chosen partner inviting them to a referral conversation.",
+      "user_story": "As a founder, I want algorithmic pairing so that I receive relevant partner suggestions.",
+      "story_points": 3,
+      "priority": "high",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "matching",
+        "algorithm"
+      ],
+      "risks": [
+        "Partner may ignore the introduction request"
+      ],
+      "testing_notes": "Mock partner endpoint and verify that a request payload is sent when a founder selects a match.",
+      "status": "planned"
+    },
+    {
+      "id": "story_referral_guide_view_009_j7k8",
+      "name": "View referral guide",
+      "feature_id": "feat_referral_guide_7a8b9c",
+      "sprint_number": 2,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a founder accesses the education section",
+          "when": "they view the referral guide",
+          "then": "they see an overview of referral steps"
+        }
+      ],
+      "dependencies": [
+        "story_intake_store_005_e9f0"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_referral_guide_7a8b9c",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Add a static page under the education section that displays the referral guide content, including step‑by‑step instructions and visual aids.",
+      "user_story": "As a founder, I want an introductory referral guide so that I understand how to structure a referral partnership.",
+      "story_points": 2,
+      "priority": "medium",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "frontend-team",
+      "labels": [
+        "education",
+        "referral"
+      ],
+      "risks": [
+        "Guide content may become outdated"
+      ],
+      "testing_notes": "Render the guide page and verify that all expected sections are present.",
+      "status": "planned"
+    },
+    {
+      "id": "story_referral_guide_assessment_010_k9l0",
+      "name": "Self‑assessment after guide",
+      "feature_id": "feat_referral_guide_7a8b9c",
+      "sprint_number": 2,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "the guide is read",
+          "when": "the founder completes a self‑assessment",
+          "then": "they receive a personalised next‑step recommendation"
+        }
+      ],
+      "dependencies": [
+        "story_referral_guide_view_009_j7k8"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_referral_guide_7a8b9c",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Implement an interactive questionnaire at the end of the guide that evaluates the founder's readiness and suggests the next action (e.g., request a match, schedule a call).",
+      "user_story": "As a founder, I want an introductory referral guide so that I understand how to structure a referral partnership.",
+      "story_points": 3,
+      "priority": "medium",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "frontend-team",
+      "labels": [
+        "education",
+        "referral"
+      ],
+      "risks": [
+        "Assessment logic may give irrelevant recommendations"
+      ],
+      "testing_notes": "Submit sample answers and verify that the returned recommendation matches expected logic.",
+      "status": "planned"
+    },
+    {
+      "id": "story_referral_template_generate_011_m1n2",
+      "name": "Generate referral template",
+      "feature_id": "feat_referral_templates_0d1e2f",
+      "sprint_number": 3,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a founder wants to draft a referral agreement",
+          "when": "they select a template",
+          "then": "a pre‑filled document is generated"
+        }
+      ],
+      "dependencies": [
+        "story_referral_guide_view_009_j7k8"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_referral_templates_0d1e2f",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Create a service that merges selected template data with founder‑specific details to produce a ready‑to‑send referral agreement document.",
+      "user_story": "As a founder, I want referral templates so that I can quickly create partnership agreements.",
+      "story_points": 3,
+      "priority": "low",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "backend-team",
+      "labels": [
+        "education",
+        "templates"
+      ],
+      "risks": [
+        "Template placeholders may not be replaced correctly"
+      ],
+      "testing_notes": "Select each template and verify that the generated document contains the founder's name and company details.",
+      "status": "planned"
+    },
+    {
+      "id": "story_referral_template_share_012_n3o4",
+      "name": "Share referral template",
+      "feature_id": "feat_referral_templates_0d1e2f",
+      "sprint_number": 3,
+      "size": "thin",
+      "acceptance_criteria": [
+        {
+          "given": "a template is generated",
+          "when": "the founder shares it with a partner",
+          "then": "the partner can accept or suggest edits"
+        }
+      ],
+      "dependencies": [
+        "story_referral_template_generate_011_m1n2"
+      ],
+      "blockers": [],
+      "source_refs": [
+        "feat_referral_templates_0d1e2f",
+        "PRD.md"
+      ],
+      "open_questions": [],
+      "description": "Implement sharing functionality that sends the generated template to the partner via email (or Slack) and provides a simple UI for the partner to accept or propose changes.",
+      "user_story": "As a founder, I want referral templates so that I can quickly create partnership agreements.",
+      "story_points": 3,
+      "priority": "low",
+      "definition_of_done": [
+        "Code merged to main",
+        "Unit tests pass",
+        "E2E smoke pass",
+        "No open ACs",
+        "Accessibility lint clean"
+      ],
+      "assignee": "frontend-team",
+      "labels": [
+        "education",
+        "templates"
+      ],
+      "risks": [
+        "Partner may not receive the shared document due to email filtering"
+      ],
+      "testing_notes": "Mock partner receipt and verify that the acceptance UI reflects the partner's response.",
+      "status": "planned"
+    }
+  ]
+}
