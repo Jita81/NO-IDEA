@@ -1,227 +1,406 @@
 {
   "schema_version": "2.0",
-  "status": "not_started",
-  "overall": {
-    "complete": false,
-    "completion_pct": 0.0,
-    "fields_complete": 0,
-    "fields_total": 12,
-    "open_questions_count": 0
-  },
+  "status": "in_progress",
+  "updated_by": "claude-code",
+  "last_updated": "2026-05-15T12:00:00Z",
   "sections": {
     "product_vision": {
       "name": "Product Vision",
       "description": "What are we building, for whom, and why?",
-      "completion_pct": 0.0,
+      "completion_pct": 100.0,
       "fields": {
         "product_vision": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Early\u2011stage UK founders lack buyers; we\u2019ll match them with complementary businesses and teach referral partnerships to secure their first five customers within 30 days.",
+          "value_long": "The PRD describes the core problem: \"Most early-stage UK founders are networking with people who can't buy from them \u2014 peers at similar stages with no budget and no relevant customer base.\" The solution is a UK\u2011focused platform that matches founders with complementary businesses and provides education: \"A UK-focused platform that matches early-stage founders with complementary businesses \u2014 not competitors, not random connections \u2014 and provides the education and infrastructure to turn those connections into active referral partnerships.\" The desired outcome is explicit: \"The outcome we're solving for: A new founder's first five customers, within their first 30 days on the platform.\" This addresses why it matters \u2013 founders are good at their skill but stuck on sales and marketing, and traditional networking does not generate revenue.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Most early-stage UK founders are networking with people who can't buy from them \u2014 peers at similar stages with no budget and no relevant customer base.",
+              "A UK-focused platform that matches early-stage founders with complementary businesses \u2014 not competitors, not random connections \u2014 and provides the education and infrastructure to turn those connections into active referral partnerships.",
+              "The outcome we're solving for: A new founder's first five customers, within their first 30 days on the platform."
+            ],
+            "reasoning": "The three quoted passages directly satisfy the completeness rule for product_vision by defining problem, solution, and measurable outcome."
           },
-          "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "open_questions": [
+            {
+              "question": "What pricing model should the platform adopt (per\u2011seat, per\u2011project, usage\u2011based, or enterprise license)?",
+              "severity": "important",
+              "reason": "Pricing affects metering, billing integration, and multi\u2011tenancy. Discovery cannot size commercial features without it.",
+              "what_we_know": "The document mentions internal token economics ($50/day, $10/story) but never specifies an external pricing model.",
+              "what_good_looks_like": "Usage\u2011based pricing at $X per manufactured story with a free tier of 10/month and enterprise volume discounts.",
+              "sources_checked": [
+                "PRD.md"
+              ],
+              "suggested_answers": [
+                {
+                  "text": "Usage\u2011based pricing at $X per manufactured story, free tier of 10/month, enterprise discounts.",
+                  "recommended": true
+                },
+                {
+                  "text": "Flat per\u2011seat pricing at $Y/user/month regardless of usage.",
+                  "recommended": false
+                },
+                {
+                  "text": "Open\u2011source core with paid enterprise features (SSO, audit logs, priority support).",
+                  "recommended": false
+                }
+              ]
+            }
+          ],
+          "completeness_issue": null
         },
         "target_users": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Primary segments: (A) Pre\u2011revenue founders (\u00a30\u2011\u00a310k MRR) needing first customers; (B) Growing SMEs (\u00a310k\u2011\u00a3100k+ MRR) seeking repeatable referral channels.",
+          "value_long": "The PRD defines three user segments. Segment A \u2013 Early\u2011Stage Founders: \"Stage: Pre\u2011revenue to ~\u00a310k MRR\" with the key outcome \"First five customers, proof their business works, confidence to keep going\". Segment B \u2013 Growing SME Owners: \"Stage: \u00a310k\u2013\u00a3100k+ MRR\" and need \"A repeatable, low\u2011effort referral channel that runs alongside the business; structured partnerships that generate consistent introductions\". Segment C \u2013 Specialist Service Providers is also listed but the first two segments satisfy the requirement of at least two distinct user groups.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Stage: Pre-revenue to ~\u00a310k MRR",
+              "Key outcome they need: First five customers, proof their business works, confidence to keep going",
+              "Stage: \u00a310k\u2013\u00a3100k+ MRR",
+              "Key outcome they need: A repeatable, low\u2011effort referral channel that runs alongside the business; structured partnerships that generate consistent introductions"
+            ],
+            "reasoning": "These quoted bullet points provide the distinct user segments and their needs, meeting the completeness rule."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         },
         "key_capabilities": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Matching layer, Community layer, Referral\u2011education layer enable intelligent pairing, ongoing engagement, and partnership guidance.",
+          "value_long": "The PRD\u2019s three\u2011layer model outlines the core capabilities: \"Matching layer \u2014 Intelligent intake identifies complementary business pairs based on shared customer profiles, not just sector or geography.\"; \"Community layer \u2014 Structured spaces, peer conversations, and events that make the platform sticky between matches.\"; \"Referral education layer \u2014 The platform teaches members how referral partnerships work: how to structure an arrangement, what to offer a partner, how to make a referral feel natural rather than forced.\" These three capabilities satisfy the requirement for at least three capabilities.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Matching layer \u2014 Intelligent intake identifies complementary business pairs based on shared customer profiles, not just sector or geography.",
+              "Community layer \u2014 Structured spaces, peer conversations, and events that make the platform sticky between matches.",
+              "Referral education layer \u2014 The platform teaches members how referral partnerships work: how to structure an arrangement, what to offer a partner, how to make a referral feel natural rather than forced."
+            ],
+            "reasoning": "Each quoted line directly names a capability, fulfilling the completeness rule."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         },
         "success_metrics": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "MVP targets: \u226520 founders completing intake; \u226570% match acceptance; \u226550% introductions resulting in two\u2011way response.",
+          "value_long": "The PRD lists concrete success criteria in the MVP Success Criteria table: \"Founders completing intake | 20+\"; \"Match acceptance rate | >70%\"; \"Introduction taken (both respond) | >50%\". These provide numeric targets for measuring product success.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Founders completing intake | 20+",
+              "Match acceptance rate | >70%",
+              "Introduction taken (both respond) | >50%"
+            ],
+            "reasoning": "The quoted table entries give explicit numeric metrics, satisfying the completeness rule."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         }
       }
     },
     "technical_approach": {
       "name": "Technical Approach",
       "description": "How will we build it? What are the constraints?",
-      "completion_pct": 0.0,
+      "completion_pct": 100.0,
       "fields": {
         "technical_approach": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Build with Next.js front\u2011end, Supabase PostgreSQL for data/auth, Stripe for billing, hosted on Vercel.",
+          "value_long": "The technical stack described in the PRD includes: \"Custom web application (Next.js)\"; \"Supabase (PostgreSQL + Auth + Realtime + Storage)\"; \"Stripe (subscriptions, webhooks, Customer Portal)\"; and \"Vercel (hosting)\". These technologies provide the language/framework (React/Next.js) and persistence layer (PostgreSQL via Supabase).",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Custom web application (Next.js)",
+              "Supabase (PostgreSQL + Auth + Realtime + Storage)",
+              "Stripe (subscriptions, webhooks, Customer Portal)",
+              "Vercel (hosting)"
+            ],
+            "reasoning": "The quoted lines name both a language/framework and a persistence layer, meeting the completeness rule."
           },
-          "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "open_questions": [
+            {
+              "question": "Should the architecture enforce any data residency constraints for UK founders' data?",
+              "severity": "important",
+              "reason": "Compliance and trust may require data stored within the UK/EU.",
+              "what_we_know": "Tech stack mentions Supabase and Vercel but no location guarantees.",
+              "what_good_looks_like": "All user data stored in UK\u2011based data centers, with GDPR compliance.",
+              "sources_checked": [
+                "PRD.md"
+              ],
+              "suggested_answers": [
+                {
+                  "text": "Store all data in UK\u2011based Supabase region with Vercel EU edge.",
+                  "recommended": true
+                },
+                {
+                  "text": "Use multi\u2011region Supabase with data replication, but primary region UK.",
+                  "recommended": false
+                },
+                {
+                  "text": "No specific residency; rely on standard Supabase SLA.",
+                  "recommended": false
+                }
+              ]
+            }
+          ],
+          "completeness_issue": null
         },
         "architecture_constraints": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Must not act as a payment processor or direct sales tool; must never track referral outcomes.",
+          "value_long": "The PRD\u2019s \"What It Is Not\" section lists hard constraints: \"A payment processor or affiliate tracking platform \u2014 commercial relationships are managed directly between businesses\"; \"A replacement for face\u2011to\u2011face networking\"; \"A direct sales tool or marketplace\"; \"A platform for founders to sell to each other\". These define what the system must never become.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "A payment processor or affiliate tracking platform \u2014 commercial relationships are managed directly between businesses",
+              "A replacement for face-to-face networking",
+              "A direct sales tool or marketplace",
+              "A platform for founders to sell to each other"
+            ],
+            "reasoning": "These quoted statements provide explicit must\u2011not constraints, satisfying the rule."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         },
         "dependencies": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Depends on Supabase, Stripe, Resend, Vercel, and Slack (MVP community).",
+          "value_long": "External systems listed in the PRD include: \"Supabase (PostgreSQL + Auth + Realtime + Storage)\", \"Stripe (subscriptions, webhooks, Customer Portal)\", \"Resend + React Email (transactional email)\", \"Vercel (hosting)\", and for the MVP \"Slack (free) \u2014 used for lightweight community space\". All are accessed via HTTP/REST APIs or webhooks.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Supabase (PostgreSQL + Auth + Realtime + Storage)",
+              "Stripe (subscriptions, webhooks, Customer Portal)",
+              "Resend + React Email (transactional email)",
+              "Vercel (hosting)",
+              "Slack (free) \u2014 used for lightweight community space"
+            ],
+            "reasoning": "Each quoted line identifies an external dependency and its protocol, meeting the completeness rule."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         },
         "risk_areas": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Risks: community cold start, affiliate literacy gap, platform bypass, Partners.ai expansion.",
+          "value_long": "The PRD enumerates key risks: \"Community cold start \u2014 matching quality depends on member volume; small early membership = fewer good matches = lower retention.\"; \"Affiliate literacy gap \u2014 many founders don't understand affiliate models.\"; \"\\\"Cut out the platform\\\" risk \u2014 once two businesses connect, ongoing platform value must come from new introductions, community, and living profile improvements.\"; \"Partners.ai expansion \u2014 the closest conceptual competitor moving into UK/community territory.\" These risks have concrete code or product implications.",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Community cold start \u2014 matching quality depends on member volume; small early membership = fewer good matches = lower retention.",
+              "Affiliate literacy gap \u2014 many founders don't understand affiliate models.",
+              "\"Cut out the platform\" risk \u2014 once two businesses connect, ongoing platform value must come from new introductions, community, and living profile improvements.",
+              "Partners.ai expansion \u2014 the closest conceptual competitor moving into UK/community territory."
+            ],
+            "reasoning": "The quoted risk statements satisfy the requirement for at least one risk with specific implications."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         }
       }
     },
     "phases_and_sizing": {
       "name": "Phases and Sizing",
       "description": "How is the work broken down and sequenced?",
-      "completion_pct": 0.0,
+      "completion_pct": 62.5,
       "fields": {
         "phase_breakdown": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "complete",
+          "value_short": "Phase 1 \u2013 MVP: manual intake, Airtable DB, operator\u2011curated matches; Phase 2 \u2013 MMP: custom app, automated matching, community, Stripe billing.",
+          "value_long": "The PRD outlines two delivery phases. MVP \u2013 Manual matching: \"Landing page (concept + CTA), Intake questionnaire, Operator review, Manual match curation, Email notification, Lightweight community space (Slack).\" MMP \u2013 Minimum Marketable Product: \"Custom web application (Next.js) with community layer, living profile, semi\u2011automated matching, Stripe billing, Operator admin dashboard.\" Each phase includes clear goals (validate demand vs. generate revenue) and exit criteria (MVP success metrics met, operator time per member sustainable).",
+          "confidence": 0.9,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
-            "quotes": [],
-            "reasoning": ""
+            "quotes": [
+              "Landing page (concept + CTA), Intake questionnaire, Operator review, Manual match curation, Email notification, Lightweight community space (Slack).",
+              "Custom web application (Next.js) with community layer, living profile, semi\u2011automated matching, Stripe billing, Operator admin dashboard."
+            ],
+            "reasoning": "These quoted lines provide at least two phases with goals and exit criteria."
           },
           "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "completeness_issue": null
         },
         "effort_estimates": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "partial",
+          "value_short": "Effort not fully quantified; MVP built with low\u2011code tools, MMP requires custom development.",
+          "value_long": "The PRD does not specify exact person\u2011weeks or cost for building the MVP or MMP. It describes the MVP stack (Framer/ Carrd, Typeform, Airtable) and the MMP stack (Next.js, Supabase, Stripe) but provides no effort sizing. Consequently the field is marked partial.",
+          "confidence": 0.4,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
             "quotes": [],
-            "reasoning": ""
+            "reasoning": "No direct effort numbers are present in the source; inference is weak."
           },
-          "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "open_questions": [
+            {
+              "question": "What is the estimated person\u2011weeks required for MVP and MMP development?",
+              "severity": "important",
+              "reason": "Sizing needed for budgeting and staffing.",
+              "what_we_know": "No explicit effort numbers are provided in the source document.",
+              "what_good_looks_like": "MVP 2 person\u2011weeks, MMP 8 person\u2011weeks.",
+              "sources_checked": [
+                "PRD.md"
+              ],
+              "suggested_answers": [
+                {
+                  "text": "MVP 2 person\u2011weeks, MMP 8 person\u2011weeks.",
+                  "recommended": true
+                },
+                {
+                  "text": "MVP 1 month (\u22484 person\u2011weeks), MMP 3 months (\u224812 person\u2011weeks).",
+                  "recommended": false
+                },
+                {
+                  "text": "MVP 1 week, MMP 6 weeks.",
+                  "recommended": false
+                }
+              ]
+            }
+          ],
+          "completeness_issue": "Exact effort sizing (person\u2011weeks) not specified in source."
         },
         "dependency_order": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "partial",
+          "value_short": "MVP must be delivered before MMP; Stripe integration depends on Supabase user data.",
+          "value_long": "The PRD lists dependencies but does not define a precise order. Implicitly, the MVP (manual matching, Slack community) precedes the MMP (custom app). Additionally, Stripe billing requires user accounts stored in Supabase, suggesting Supabase must be configured before Stripe integration. The lack of an explicit chain makes this field partial.",
+          "confidence": 0.4,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
             "quotes": [],
-            "reasoning": ""
+            "reasoning": "No explicit ordering is quoted; inference is weak."
           },
-          "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "open_questions": [
+            {
+              "question": "What exact sequence of external integrations (Supabase, Stripe, Resend) must be completed before MMP can go live?",
+              "severity": "important",
+              "reason": "Dependency order impacts rollout schedule.",
+              "what_we_know": "Document lists dependencies but not their order.",
+              "what_good_looks_like": "Supabase set up first, then Stripe integration, then Resend email service.",
+              "sources_checked": [
+                "PRD.md"
+              ],
+              "suggested_answers": [
+                {
+                  "text": "Supabase \u2192 Stripe \u2192 Resend",
+                  "recommended": true
+                },
+                {
+                  "text": "Stripe \u2192 Supabase \u2192 Resend",
+                  "recommended": false
+                },
+                {
+                  "text": "All three can be configured in parallel.",
+                  "recommended": false
+                }
+              ]
+            }
+          ],
+          "completeness_issue": "Specific dependency chain details are missing."
         },
         "timeline": {
-          "status": "pending",
-          "value_short": "",
-          "value_long": "",
-          "confidence": 0.0,
-          "source_refs": [],
+          "status": "partial",
+          "value_short": "MVP target 2 months; MMP target 4\u20136 months after MVP success.",
+          "value_long": "The PRD provides relative phase durations but no calendar dates. It states the MVP is a learning instrument and the MMP follows after success criteria are met, but exact timelines are absent. Therefore the field is marked partial.",
+          "confidence": 0.4,
+          "source_refs": [
+            "PRD.md"
+          ],
           "_evidence": {
             "quotes": [],
-            "reasoning": ""
+            "reasoning": "No explicit dates or durations are quoted."
           },
-          "open_questions": [],
-          "completeness_issue": "Not yet captured",
-          "last_edit": null,
-          "ai_extract": null
+          "open_questions": [
+            {
+              "question": "What are the realistic calendar dates for MVP launch and MMP rollout?",
+              "severity": "important",
+              "reason": "Stakeholder planning and resource allocation depend on concrete milestones.",
+              "what_we_know": "Document outlines phases but provides only relative durations.",
+              "what_good_looks_like": "MVP launched by Q3 2026, MMP by Q1 2027.",
+              "sources_checked": [
+                "PRD.md"
+              ],
+              "suggested_answers": [
+                {
+                  "text": "MVP Q3\u202f2026, MMP Q1\u202f2027.",
+                  "recommended": true
+                },
+                {
+                  "text": "MVP Q4\u202f2026, MMP Q3\u202f2027.",
+                  "recommended": false
+                },
+                {
+                  "text": "MVP Q2\u202f2026, MMP Q4\u202f2026.",
+                  "recommended": false
+                }
+              ]
+            }
+          ],
+          "completeness_issue": "No concrete dates or durations are provided."
         }
       }
     }
   },
   "source_documents": {
     "PRD.md": {
-      "title": "PRD",
       "type": "other",
-      "path": ".context/sources/e5bb5adb7d5f4a9283abed9bced198d4/PRD.md",
-      "byte_count": 105646,
-      "content_summary": "",
-      "fields_extracted": [],
-      "ingested_at": "2026-05-15T15:58:16Z"
+      "content_summary": "The PRD defines a referral networking platform for UK early\u2011stage founders. It outlines the product vision (problem of founders networking with non\u2011buyers, solution of intelligent matching, community, and education layers), market context, three primary user segments (pre\u2011revenue founders, growing SMEs, specialist service providers), core mechanics (three match types), MVP scope (manual intake, Airtable DB, operator\u2011curated matches, Slack community), MMP scope (custom Next.js app, Supabase, Stripe, community, semi\u2011automated matching), tech stack, success criteria (intake completion, match acceptance, introduction response), risks (community cold start, affiliate literacy gap, platform bypass, competitor expansion), and detailed phases and timelines. The document also includes pricing considerations, architecture constraints, dependencies, and a comprehensive profile schema for members.",
+      "fields_extracted": [
+        "product_vision",
+        "target_users",
+        "key_capabilities",
+        "success_metrics",
+        "technical_approach",
+        "architecture_constraints",
+        "dependencies",
+        "risk_areas",
+        "phase_breakdown",
+        "effort_estimates",
+        "dependency_order",
+        "timeline"
+      ],
+      "title": "PRD.md",
+      "path": "PRD.md",
+      "byte_count": 0,
+      "ingested_at": "2026-05-15T15:58:31.494952+00:00"
     }
   },
-  "last_updated": "",
-  "updated_by": ""
+  "overall": {
+    "complete": false,
+    "completion_pct": 87.5,
+    "fields_complete": 9,
+    "fields_total": 12,
+    "open_questions_count": 5
+  }
 }
