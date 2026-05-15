@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "epic_id": "epic_matching-layer_a1b2c3",
+  "epic_slug": "matching-layer",
+  "horizon": "mvp",
+  "generated_at": "2026-05-15T16:20:00Z",
+  "generated_by": "claude-code",
+  "features": [
+    {
+      "id": "feat_intake_questionnaire_a1b2c3",
+      "name": "Intake questionnaire",
+      "epic_id": "epic_matching-layer_a1b2c3",
+      "description": "Provides a structured questionnaire for founders to supply the information needed to identify complementary partners. The questionnaire captures business profile, target customers, and partnership preferences. This data is essential for generating accurate matches in the MVP.",
+      "horizon": "mvp",
+      "priority": "critical",
+      "status": "draft",
+      "acceptance_criteria": [
+        "Given a founder accesses the intake page, when they complete the questionnaire, then the system stores their profile data.",
+        "Given the questionnaire is submitted, when the data is validated, then the founder receives a confirmation email."
+      ],
+      "user_story": "As a founder, I want an intake questionnaire so that I can provide the information needed to find complementary partners.",
+      "business_value": "Provides the data needed to generate partner matches, directly supporting the MVP success metric of >70% match acceptance and enabling founders to acquire their first five customers within 30 days.",
+      "testing_contract_ref": "feat_intake_questionnaire_a1b2c3",
+      "dependencies": [],
+      "dependency_rationale": "",
+      "sprint_number": 1,
+      "labels": [
+        "intake",
+        "matching"
+      ],
+      "source_refs": [
+        "epic_matching-layer_a1b2c3",
+        "inception.json:product_vision",
+        "PRD.md"
+      ],
+      "open_questions": [
+        {
+          "question": "Is the intake questionnaire truly critical for MVP success or could it be deferred to MMP?",
+          "severity": "moderate",
+          "reason": "The epic is classified as 'must', but the MVP may validate demand with a simpler form; clarification needed to confirm priority.",
+          "sources_checked": [
+            "epics.json:epic_matching-layer_a1b2c3",
+            "inception.json:success_metrics"
+          ],
+          "field": "_decision"
+        }
+      ]
+    },
+    {
+      "id": "feat_pairing_engine_d4e5f6",
+      "name": "Pairing engine",
+      "epic_id": "epic_matching-layer_a1b2c3",
+      "description": "Runs an algorithm that analyses intake data to generate a shortlist of complementary partners. The engine ranks candidates based on shared customer profiles and partnership potential. Results are presented to the founder for selection.",
+      "horizon": "mvp",
+      "priority": "high",
+      "status": "draft",
+      "acceptance_criteria": [
+        "Given stored profile data exists, when the pairing algorithm runs, then a list of up to three complementary partners is presented.",
+        "Given a list of matches is shown, when the founder selects a partner, then an introduction request is sent to the partner."
+      ],
+      "user_story": "As a founder, I want algorithmic pairing so that I receive relevant partner suggestions.",
+      "business_value": "Enables founders to receive curated partner suggestions, increasing match acceptance rates and moving towards the goal of first five customers within 30 days.",
+      "testing_contract_ref": "feat_pairing_engine_d4e5f6",
+      "dependencies": [
+        "feat_intake_questionnaire_a1b2c3"
+      ],
+      "dependency_rationale": "Pairing engine consumes data collected by the intake questionnaire.",
+      "sprint_number": 2,
+      "labels": [
+        "matching",
+        "algorithm"
+      ],
+      "source_refs": [
+        "epic_matching-layer_a1b2c3",
+        "inception.json:product_vision",
+        "PRD.md"
+      ],
+      "open_questions": []
+    }
+  ]
+}

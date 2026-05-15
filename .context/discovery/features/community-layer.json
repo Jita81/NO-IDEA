@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "epic_id": "epic_community-layer_def456",
+  "epic_slug": "community-layer",
+  "horizon": "mvp",
+  "generated_at": "2026-05-15T16:20:00Z",
+  "generated_by": "claude-code",
+  "features": [
+    {
+      "id": "feat_slack_community_1a2b3c",
+      "name": "Slack community",
+      "epic_id": "epic_community-layer_def456",
+      "description": "Integrates founders into a lightweight Slack workspace where they can introduce themselves and share referral opportunities. The workspace is provisioned automatically after intake completion. This provides an immediate channel for peer interaction in the MVP.",
+      "horizon": "mvp",
+      "priority": "high",
+      "status": "draft",
+      "acceptance_criteria": [
+        "Given a founder completes intake, when they are added to the Slack workspace, then they receive an invitation link.",
+        "Given a founder joins Slack, when they post a message in the #introductions channel, then other members can view and respond."
+      ],
+      "user_story": "As a founder, I want a Slack community so that I can engage with peers and share referrals.",
+      "business_value": "Creates a sticky environment that encourages ongoing interaction, improving match acceptance and introduction response rates, contributing to the success metric of ≥20 founders completing intake.",
+      "testing_contract_ref": "feat_slack_community_1a2b3c",
+      "dependencies": [
+        "feat_intake_questionnaire_a1b2c3"
+      ],
+      "dependency_rationale": "Community members are onboarded via the intake questionnaire.",
+      "sprint_number": 2,
+      "labels": [
+        "community",
+        "slack"
+      ],
+      "source_refs": [
+        "epic_community-layer_def456",
+        "inception.json:phase_breakdown",
+        "PRD.md"
+      ],
+      "open_questions": [
+        {
+          "question": "Should the community layer be limited to Slack for MVP or expanded to a full forum in MMP?",
+          "severity": "moderate",
+          "reason": "The epic is 'must', but the MVP scope mentions only Slack; clarification needed to decide the extent of community features for MVP.",
+          "sources_checked": [
+            "epics.json:epic_community-layer_def456",
+            "inception.json:phase_breakdown"
+          ],
+          "field": "_decision"
+        }
+      ]
+    },
+    {
+      "id": "feat_community_spaces_4d5e6f",
+      "name": "Community spaces",
+      "epic_id": "epic_community-layer_def456",
+      "description": "Provides structured discussion spaces and forums within the Slack workspace for founders to start topic threads and schedule events. Spaces are organised by industry and referral interests, fostering focused conversations.",
+      "horizon": "mvp",
+      "priority": "medium",
+      "status": "draft",
+      "acceptance_criteria": [
+        "Given the Slack workspace is active, when a community forum page is created, then founders can start discussion threads.",
+        "Given a discussion thread exists, when a founder comments, then notifications are sent to participants."
+      ],
+      "user_story": "As a founder, I want structured community spaces so that I can discuss partnership opportunities.",
+      "business_value": "Enables focused peer interaction that nurtures relationships, supporting higher match acceptance and introduction response rates.",
+      "testing_contract_ref": "feat_community_spaces_4d5e6f",
+      "dependencies": [
+        "feat_slack_community_1a2b3c"
+      ],
+      "dependency_rationale": "Spaces build on the Slack community foundation.",
+      "sprint_number": 3,
+      "labels": [
+        "community",
+        "forums"
+      ],
+      "source_refs": [
+        "epic_community-layer_def456",
+        "inception.json:phase_breakdown",
+        "PRD.md"
+      ],
+      "open_questions": []
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "epic_id": "epic_referral-education-layer_789abc",
+  "epic_slug": "referral-education-layer",
+  "horizon": "mvp",
+  "generated_at": "2026-05-15T16:20:00Z",
+  "generated_by": "claude-code",
+  "features": [
+    {
+      "id": "feat_referral_guide_7a8b9c",
+      "name": "Referral guide",
+      "epic_id": "epic_referral-education-layer_789abc",
+      "description": "Provides a concise introductory guide that explains the fundamentals of referral partnerships, including how to structure an agreement and approach a partner. The guide is accessible from the education section of the platform.",
+      "horizon": "mvp",
+      "priority": "medium",
+      "status": "draft",
+      "acceptance_criteria": [
+        "Given a founder accesses the education section, when they view the referral guide, then they see an overview of referral steps.",
+        "Given the guide is read, when the founder completes a self-assessment, then they receive a personalised next-step recommendation."
+      ],
+      "user_story": "As a founder, I want an introductory referral guide so that I understand how to structure a referral partnership.",
+      "business_value": "Equips founders with the knowledge to execute referrals effectively, increasing the likelihood that introductions convert, supporting the >50% introduction response metric.",
+      "testing_contract_ref": "feat_referral_guide_7a8b9c",
+      "dependencies": [
+        "feat_intake_questionnaire_a1b2c3"
+      ],
+      "dependency_rationale": "Guide assumes data from the intake questionnaire.",
+      "sprint_number": 2,
+      "labels": [
+        "education",
+        "referral"
+      ],
+      "source_refs": [
+        "epic_referral-education-layer_789abc",
+        "inception.json:phase_breakdown",
+        "PRD.md"
+      ],
+      "open_questions": [
+        {
+          "question": "Is a basic referral guide sufficient for MVP or is a full tutorial suite required?",
+          "severity": "moderate",
+          "reason": "The epic is 'must', but MVP may only need minimal education; need to confirm the depth of content to deliver in MVP.",
+          "sources_checked": [
+            "epics.json:epic_referral-education-layer_789abc",
+            "inception.json:phase_breakdown"
+          ],
+          "field": "_decision"
+        }
+      ]
+    },
+    {
+      "id": "feat_referral_templates_0d1e2f",
+      "name": "Referral templates",
+      "epic_id": "epic_referral-education-layer_789abc",
+      "description": "Offers ready‑made referral agreement templates and short tutorial videos that founders can customise and share with potential partners. Templates streamline the creation of partnership documents.",
+      "horizon": "mvp",
+      "priority": "low",
+      "status": "draft",
+      "acceptance_criteria": [
+        "Given a founder wants to draft a referral agreement, when they select a template, then a pre‑filled document is generated.",
+        "Given a template is generated, when the founder shares it with a partner, then the partner can accept or suggest edits."
+      ],
+      "user_story": "As a founder, I want referral templates so that I can quickly create partnership agreements.",
+      "business_value": "Reduces friction in establishing referral agreements, helping to increase conversion of introductions and supporting the success metric of >50% introduction response.",
+      "testing_contract_ref": "feat_referral_templates_0d1e2f",
+      "dependencies": [
+        "feat_referral_guide_7a8b9c"
+      ],
+      "dependency_rationale": "Templates build on the concepts introduced in the referral guide.",
+      "sprint_number": 3,
+      "labels": [
+        "education",
+        "templates"
+      ],
+      "source_refs": [
+        "epic_referral-education-layer_789abc",
+        "inception.json:phase_breakdown",
+        "PRD.md"
+      ],
+      "open_questions": []
+    }
+  ]
+}
