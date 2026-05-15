@@ -5,7 +5,8 @@
   },
   "features": {
     "mvp": {
-      "signed_off": false
+      "signed_off": true,
+      "at": "2026-05-15T16:08:04.750694+00:00"
     },
     "mmp": {
       "signed_off": false
@@ -20,9 +21,10 @@
   "horizons": {
     "mvp": {
       "epics_signed_off": true,
-      "features_signed_off": false,
+      "features_signed_off": true,
       "stories_signed_off": false,
-      "epics_signed_off_at": "2026-05-15T16:06:46.655094+00:00"
+      "epics_signed_off_at": "2026-05-15T16:06:46.655094+00:00",
+      "features_signed_off_at": "2026-05-15T16:08:04.750694+00:00"
     },
     "mmp": {
       "epics_signed_off": false,
