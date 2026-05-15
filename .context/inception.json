@@ -1,0 +1,227 @@
+{
+  "schema_version": "2.0",
+  "status": "not_started",
+  "overall": {
+    "complete": false,
+    "completion_pct": 0.0,
+    "fields_complete": 0,
+    "fields_total": 12,
+    "open_questions_count": 0
+  },
+  "sections": {
+    "product_vision": {
+      "name": "Product Vision",
+      "description": "What are we building, for whom, and why?",
+      "completion_pct": 0.0,
+      "fields": {
+        "product_vision": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "target_users": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "key_capabilities": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "success_metrics": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        }
+      }
+    },
+    "technical_approach": {
+      "name": "Technical Approach",
+      "description": "How will we build it? What are the constraints?",
+      "completion_pct": 0.0,
+      "fields": {
+        "technical_approach": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "architecture_constraints": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "dependencies": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "risk_areas": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        }
+      }
+    },
+    "phases_and_sizing": {
+      "name": "Phases and Sizing",
+      "description": "How is the work broken down and sequenced?",
+      "completion_pct": 0.0,
+      "fields": {
+        "phase_breakdown": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "effort_estimates": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "dependency_order": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        },
+        "timeline": {
+          "status": "pending",
+          "value_short": "",
+          "value_long": "",
+          "confidence": 0.0,
+          "source_refs": [],
+          "_evidence": {
+            "quotes": [],
+            "reasoning": ""
+          },
+          "open_questions": [],
+          "completeness_issue": "Not yet captured",
+          "last_edit": null,
+          "ai_extract": null
+        }
+      }
+    }
+  },
+  "source_documents": {
+    "PRD.md": {
+      "title": "PRD",
+      "type": "other",
+      "path": ".context/sources/e5bb5adb7d5f4a9283abed9bced198d4/PRD.md",
+      "byte_count": 105646,
+      "content_summary": "",
+      "fields_extracted": [],
+      "ingested_at": "2026-05-15T15:58:16Z"
+    }
+  },
+  "last_updated": "",
+  "updated_by": ""
+}
