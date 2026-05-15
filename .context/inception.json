@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "status": "in_progress",
   "updated_by": "user",
-  "last_updated": "2026-05-15T16:03:58.264482+00:00",
+  "last_updated": "2026-05-15T16:04:01.206870+00:00",
   "sections": {
     "product_vision": {
       "name": "Product Vision",
@@ -105,8 +105,8 @@
       "fields": {
         "technical_approach": {
           "status": "complete",
-          "value_short": "Build with Next.js front\u2011end, Supabase PostgreSQL for data/auth, Stripe for billing, hosted on Vercel.",
-          "value_long": "The technical stack described in the PRD includes: \"Custom web application (Next.js)\"; \"Supabase (PostgreSQL + Auth + Realtime + Storage)\"; \"Stripe (subscriptions, webhooks, Customer Portal)\"; and \"Vercel (hosting)\". These technologies provide the language/framework (React/Next.js) and persistence layer (PostgreSQL via Supabase).",
+          "value_short": "The architecture stores all UK founders' data in a UK\u2011based Supabase region and serves the app via Vercel\u2019s EU edge to enforce data residency constraints.",
+          "value_long": "The technical stack described in the PRD includes: \"Custom web application (Next.js)\"; \"Supabase (PostgreSQL + Auth + Realtime + Storage)\"; \"Stripe (subscriptions, webhooks, Customer Portal)\"; and \"Vercel (hosting)\". These technologies provide the language/framework (React/Next.js) and persistence layer (PostgreSQL via Supabase). Additionally, to enforce data residency constraints for UK founders, all data will be stored in a UK\u2011based Supabase region, and the application will be delivered through Vercel\u2019s EU edge network, ensuring that data remains within the United Kingdom/EU jurisdiction.",
           "confidence": 0.9,
           "source_refs": [
             "PRD.md"
@@ -120,33 +120,18 @@
             ],
             "reasoning": "The quoted lines name both a language/framework and a persistence layer, meeting the completeness rule."
           },
-          "open_questions": [
-            {
-              "question": "Should the architecture enforce any data residency constraints for UK founders' data?",
-              "severity": "important",
-              "reason": "Compliance and trust may require data stored within the UK/EU.",
-              "what_we_know": "Tech stack mentions Supabase and Vercel but no location guarantees.",
-              "what_good_looks_like": "All user data stored in UK\u2011based data centers, with GDPR compliance.",
-              "sources_checked": [
-                "PRD.md"
-              ],
-              "suggested_answers": [
-                {
-                  "text": "Store all data in UK\u2011based Supabase region with Vercel EU edge.",
-                  "recommended": true
-                },
-                {
-                  "text": "Use multi\u2011region Supabase with data replication, but primary region UK.",
-                  "recommended": false
-                },
-                {
-                  "text": "No specific residency; rely on standard Supabase SLA.",
-                  "recommended": false
-                }
-              ]
-            }
-          ],
-          "completeness_issue": null
+          "open_questions": [],
+          "completeness_issue": null,
+          "last_edit": {
+            "by": "athena",
+            "at": "2026-05-15T16:04:01.206819+00:00",
+            "source": "inception_edit.answer_merge",
+            "diff_span": {
+              "start": 0,
+              "end": 597
+            },
+            "diff_kind": "merge"
+          }
         },
         "architecture_constraints": {
           "status": "complete",
@@ -371,6 +356,6 @@
     "completion_pct": 91.7,
     "fields_complete": 10,
     "fields_total": 12,
-    "open_questions_count": 3
+    "open_questions_count": 2
   }
 }
