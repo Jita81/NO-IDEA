@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "generated_at": "2026-05-15T16:10:00Z",
+  "generated_by": "claude-code",
+  "epics": [
+    {
+      "id": "epic_matching-layer_a1b2c3",
+      "name": "Matching Layer",
+      "description": "Provides intelligent intake that identifies complementary business pairs based on shared customer profiles, not just sector or geography. Enables founders to discover partners who can refer customers, accelerating acquisition of their first five customers. This capability is the core driver of the platform’s value proposition.",
+      "moscow_class": "must",
+      "business_case": "Founders currently rely on random networking, which seldom yields paying customers. Without an automated matching capability the platform cannot deliver the promised first five customers within 30 days, undermining its market proposition. Building the matching layer now enables measurable referral introductions, satisfies the MVP success criteria, and unlocks revenue potential; failing to build it would render the platform ineffective.",
+      "success_metrics": [
+        "Match acceptance rate > 70%",
+        "Introduction taken (both parties respond) > 50%"
+      ],
+      "scope": [
+        "Intelligent intake questionnaire",
+        "Algorithmic pairing based on shared customer profiles",
+        "Match recommendation UI"
+      ],
+      "out_of_scope": [
+        "Community engagement features",
+        "Referral education content"
+      ],
+      "source_capability": "Matching layer — Intelligent intake identifies complementary business pairs based on shared customer profiles, not just sector or geography.",
+      "source_refs": [
+        "inception.json:product_vision",
+        "inception.json:key_capabilities"
+      ],
+      "confidence": 0.85,
+      "dependencies": [],
+      "tags": [
+        "matching"
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "epic_community-layer_def456",
+      "name": "Community Layer",
+      "description": "Creates structured spaces, peer conversations, and events that keep members engaged between matches. Provides a sticky community experience that encourages repeat referrals and knowledge sharing. Supports the platform’s goal of fostering ongoing partnership networks.",
+      "moscow_class": "must",
+      "business_case": "Even with good matches, founders need ongoing interaction to nurture relationships and generate repeat referrals. Without a community layer engagement drops, reducing match acceptance and introduction response rates. Implementing the community layer now will improve retention, drive the success metrics, and ensure the platform remains valuable beyond the first match.",
+      "success_metrics": [
+        "Founders completing intake ≥ 20"
+      ],
+      "scope": [
+        "Community spaces and forums",
+        "Peer conversation channels",
+        "Event scheduling and Slack integration"
+      ],
+      "out_of_scope": [
+        "Intelligent matching algorithms",
+        "Referral education content"
+      ],
+      "source_capability": "Community layer — Structured spaces, peer conversations, and events that make the platform sticky between matches.",
+      "source_refs": [
+        "inception.json:product_vision",
+        "inception.json:key_capabilities"
+      ],
+      "confidence": 0.85,
+      "dependencies": [
+        "epic_matching-layer_a1b2c3"
+      ],
+      "tags": [
+        "community"
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "epic_referral-education-layer_789abc",
+      "name": "Referral Education Layer",
+      "description": "Provides education on how referral partnerships work, including structuring arrangements, offering value to partners, and making referrals feel natural. Delivers tutorials, templates, and guidance to increase founders’ confidence in using referrals. Aligns with the platform’s aim to accelerate early customer acquisition.",
+      "moscow_class": "must",
+      "business_case": "Founders often lack knowledge of referral mechanics, leading to low conversion and missed opportunities. Without education, even matched pairs may not execute effective referrals, undermining the platform’s value proposition. Adding the referral education layer now equips users to maximise match outcomes, supporting the success metrics and reducing churn.",
+      "success_metrics": [
+        "Match acceptance rate > 70%",
+        "Introduction taken (both parties respond) > 50%"
+      ],
+      "scope": [
+        "Educational content on referral structures",
+        "Templates and guides for partnership agreements",
+        "Interactive tutorials and best‑practice videos"
+      ],
+      "out_of_scope": [
+        "Intelligent matching algorithms",
+        "Community engagement features"
+      ],
+      "source_capability": "Referral education layer — The platform teaches members how referral partnerships work: how to structure an arrangement, what to offer a partner, how to make a referral feel natural rather than forced.",
+      "source_refs": [
+        "inception.json:product_vision",
+        "inception.json:key_capabilities"
+      ],
+      "confidence": 0.85,
+      "dependencies": [
+        "epic_matching-layer_a1b2c3"
+      ],
+      "tags": [
+        "referral-education"
+      ],
+      "open_questions": []
+    }
+  ]
+}
