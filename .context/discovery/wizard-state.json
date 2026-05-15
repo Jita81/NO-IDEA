@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "epics": {
+    "signed_off": false
+  },
+  "features": {
+    "mvp": {
+      "signed_off": false
+    },
+    "mmp": {
+      "signed_off": false
+    },
+    "full": {
+      "signed_off": false
+    }
+  },
+  "stories": {
+    "signed_off": false
+  },
+  "horizons": {
+    "mvp": {
+      "epics_signed_off": true,
+      "features_signed_off": false,
+      "stories_signed_off": false,
+      "epics_signed_off_at": "2026-05-15T16:06:46.655094+00:00"
+    },
+    "mmp": {
+      "epics_signed_off": false,
+      "features_signed_off": false,
+      "stories_signed_off": false
+    },
+    "full": {
+      "epics_signed_off": false,
+      "features_signed_off": false,
+      "stories_signed_off": false
+    }
+  }
+}
